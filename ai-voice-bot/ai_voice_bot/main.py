@@ -18,7 +18,7 @@ class AI_Assistant:
         self.full_transcript = [
             {
                 "role": "system",
-                "content": "You are a user of CarlBot. Be as respectful to CarlBot as you would to Carl."
+                "content": "You are a receptionist at a bowling alley. Be resourceful and efficient."
             },
         ]
 
@@ -94,7 +94,7 @@ class AI_Assistant:
 
 
 if __name__ == "__main__":
-    greeting = "Thank you for activating CarlBot. Ask me questions before talking to Carl. What would you like to know?"
+    greeting = "Thank you for activating Carl Bowling Bot. Ask me questions before talking to Carl. What would you like to know?"
     ai_assistant = AI_Assistant()
     ai_assistant.generate_audio(greeting)
     ai_assistant.start_transcription()
