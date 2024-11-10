@@ -1,5 +1,6 @@
-'''
-Given a clickstream of user activity data , find the relevant user session for each click event.
+"""
+Given a clickstream of user activity data , find the relevant user
+session for each click event.
 
 click_time | user_id
 2018–01–01 11:00:00 | u1
@@ -12,9 +13,10 @@ click_time | user_id
 2018–01–02 11:00:00 | u2
 
 session definition:
-1. session expires after inactivity of 30mins, because of inactivity no clickstream will be generated
+1. session expires after inactivity of 30mins, because of inactivity no
+clickstream will be generated
 2. session remain active for total of 2 hours
-'''
+"""
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import (
