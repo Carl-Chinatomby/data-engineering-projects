@@ -17,7 +17,6 @@ session definition:
 clickstream will be generated
 2. session remain active for total of 2 hours
 """
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import (
     col,
@@ -75,3 +74,5 @@ clickstream_df = clickstream_df.withColumn('session_new', when(col('timestamp_di
 # # New session names
 clickstream_df = clickstream_df.withColumn('session_new_name', concat(col('user_id'), lit('--S'), sum(col("session_new")).over(session_window)))
 clickstream_df.show()
+
+spark.stop()

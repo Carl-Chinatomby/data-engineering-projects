@@ -35,3 +35,5 @@ pivot_df = df.selectExpr(
 )
 
 pivot_df.show()
+
+spark.stop()
