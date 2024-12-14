@@ -10,11 +10,11 @@ The results should be ordered alphabetically by department and then by the highe
 Solution Explanation
 We will solve this problem using the following steps in PySpark:
 
-Read the Employee Data: We’ll start by creating a DataFrame that contains the employee data.
-Select Distinct Salaries: Since we need distinct salaries, we will ensure we only select distinct salary values for each department.
-Rank Salaries: We will use PySpark’s Window function to rank the salaries within each department.
-Filter Top 3 Salaries: After ranking, we will filter out the top 3 salaries within each department.
-Sort the Results: Finally, we will order the results alphabetically by department and then by the salary in descending order.
+- Read the Employee Data: We’ll start by creating a DataFrame that contains the employee data.
+- Select Distinct Salaries: Since we need distinct salaries, we will ensure we only select distinct salary values for each department.
+- Rank Salaries: We will use PySpark’s Window function to rank the salaries within each department.
+- Filter Top 3 Salaries: After ranking, we will filter out the top 3 salaries within each department.
+- Sort the Results: Finally, we will order the results alphabetically by department and then by the salary in descending order.
 """
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, rank
