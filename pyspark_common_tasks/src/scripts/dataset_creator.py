@@ -8,6 +8,7 @@ from datetime import (
 import pandas as pd
 import numpy as np
 
+BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 # Generate 200,000 records
 records = []
 product_categories = ['Electronics', 'Clothing', 'Home & Garden', 'Books', 'Sports']
@@ -60,7 +61,7 @@ for i in range(200000):
     }
     records.append(record)
 
-with open(f'{ os.path.dirname(os.path.realpath(__file__)) }/../../data/sales_data.json', 'w') as f:
+with open(f'{BASE_PATH}/../../data/sales_data.json', 'w') as f:
     json.dump(records, f)
 
 print("Dataset created successfully with 200,000 records!")

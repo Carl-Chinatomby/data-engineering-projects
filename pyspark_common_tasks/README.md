@@ -2,7 +2,7 @@ Run src/scripts/dataset_creator.py to create the input datasets. From there you 
 and check the output directory.
 
 
-
+```
 ├── data
 │   └── sales_data.json
 ├── output
@@ -13,7 +13,7 @@ and check the output directory.
     └── scripts
         └── dataset_creator.py
         └── ..
-
+```
 
 
 Nested JSON Flattening and Optimization
