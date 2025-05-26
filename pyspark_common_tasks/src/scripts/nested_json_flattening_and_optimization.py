@@ -19,7 +19,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, explode, expr, concat_ws
 
 
-BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+BASE_PATH = f"{os.path.dirname(os.path.realpath(__file__))}/../../"
 
 
 def create_spark_session():
@@ -81,8 +81,8 @@ def main():
 
         flattened_df = flatten_nested_json(
             spark,
-            f"{BASE_PATH}/../../data/sales_data.json",
-            f"{BASE_PATH}/../../output/flattened_sales"
+            f"{BASE_PATH}data/sales_data.json",
+            f"{BASE_PATH}output/flattened_sales"
         )
 
         # Validate output
